@@ -8,8 +8,8 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_USER: "${POSTGRES_USER:-postgres}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?err}"
     volumes:
       - ./postgres:/var/lib/postgresql/data
       - ./src/main/resources/db/initDB.sql:/docker-entrypoint-initdb.d/init.sql

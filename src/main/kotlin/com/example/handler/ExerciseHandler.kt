@@ -89,7 +89,7 @@ class ExerciseHandler(cache: Cache<CacheKey, String>): Handler {
                     transaction { author.setState(State.SHOW_DIFFICULTY, now) }
                     listOf(message)
                 } else {
-                    val message = createMessage(chatId, "There is no exercises for group '$groupName''\uD83D\uDDD1️")
+                    val message = createMessage(chatId, "There is no exercises for group '$groupName' \uD83D\uDD0D")
                     transaction { author.clearState(now) }
                     listOf(message)
                 }

@@ -36,6 +36,6 @@ CREATE TABLE IF NOT EXISTS trainings (
     exercise_id integer references exercises (id),
     difficulty numeric(6, 2) not null,
     repeats integer not null,
-    grouped boolean not null default FALSE
-    created_at timestamp not null default now(),
+    grouped boolean not null default FALSE,
+    created_at timestamp not null default now()
 );

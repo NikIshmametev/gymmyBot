@@ -38,6 +38,7 @@ out/
 
 ### App credentials ###
 src/main/resources/application.yaml
+.env
 
 ### Database ###
 postgres
