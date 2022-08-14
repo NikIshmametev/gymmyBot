@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS groups (
     id serial primary key,
     "name" text not null,
-    created_at timestamp not null,
+    created_at timestamp not null default now(),
     created_by integer references users (id) default 1
 );
 
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS exercises (
     id serial primary key,
     "name" text not null,
     group_id integer references groups (id),
-    created_at timestamp not null,
+    created_at timestamp not null default now(),
     created_by integer references users (id) default 1
 );
 
